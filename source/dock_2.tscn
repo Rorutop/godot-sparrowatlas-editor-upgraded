@@ -1,0 +1,141 @@
+[gd_scene load_steps=4 format=3 uid="uid://o55fwa5w63q5"]
+
+[ext_resource type="Theme" uid="uid://brm70mrpblmnq" path="res://addons/sparrowatlas_editor/theme/theme.tres" id="1_188cm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0riso"]
+bg_color = Color(0.148438, 0.171875, 0.230469, 1)
+border_width_left = 5
+border_color = Color(0.125, 0.144531, 0.191406, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l6luc"]
+
+[node name="Dock2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FilePath" type="FileDialog" parent="."]
+mode = 2
+position = Vector2i(0, 36)
+size = Vector2i(384, 162)
+theme = ExtResource("1_188cm")
+ok_button_text = "Save"
+filters = PackedStringArray("*.tscn")
+show_hidden_files = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "AnimationPlayer Mode"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_0riso")
+text = "Sprite Lists            "
+justification_flags = 235
+
+[node name="AddList" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_188cm")
+text = "+"
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_l6luc")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/PanelContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="VBoxContainer/PanelContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_0riso")
+text = "        
+
+
+         
+
+
+
+
+
+      "
+justification_flags = 235
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/PanelContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_scroll_mode = 0
+
+[node name="SpriteContainer" type="VBoxContainer" parent="VBoxContainer/PanelContainer/HBoxContainer2/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Sprite--0" type="VBoxContainer" parent="VBoxContainer/PanelContainer/HBoxContainer2/ScrollContainer/SpriteContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/PanelContainer/HBoxContainer2/ScrollContainer/SpriteContainer/Sprite--0"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/PanelContainer/HBoxContainer2/ScrollContainer/SpriteContainer/Sprite--0/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_0riso")
+text = "Sprite 0"
+justification_flags = 171
+
+[node name="RemoveSprite" type="Button" parent="VBoxContainer/PanelContainer/HBoxContainer2/ScrollContainer/SpriteContainer/Sprite--0/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_188cm")
+text = "-"
+
+[node name="SpritePath" type="HBoxContainer" parent="VBoxContainer/PanelContainer/HBoxContainer2/ScrollContainer/SpriteContainer/Sprite--0"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/PanelContainer/HBoxContainer2/ScrollContainer/SpriteContainer/Sprite--0/SpritePath"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_0riso")
+text = "Sprite :"
+
+[node name="Path" type="LineEdit" parent="VBoxContainer/PanelContainer/HBoxContainer2/ScrollContainer/SpriteContainer/Sprite--0/SpritePath"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.0
+placeholder_text = "res://icon.png"
+expand_to_text_length = true
+
+[node name="SheetPath" type="HBoxContainer" parent="VBoxContainer/PanelContainer/HBoxContainer2/ScrollContainer/SpriteContainer/Sprite--0"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/PanelContainer/HBoxContainer2/ScrollContainer/SpriteContainer/Sprite--0/SheetPath"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_0riso")
+text = "Sheet :"
+
+[node name="Path" type="LineEdit" parent="VBoxContainer/PanelContainer/HBoxContainer2/ScrollContainer/SpriteContainer/Sprite--0/SheetPath"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "res://icon.xml"
+expand_to_text_length = true
+
+[node name="SaveAnimPlayer" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_188cm")
+text = "Save AnimationPlayer"
