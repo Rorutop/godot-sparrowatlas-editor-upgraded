@@ -1,0 +1,1 @@
+# godot-sparrowatlas-editor-upgraded
