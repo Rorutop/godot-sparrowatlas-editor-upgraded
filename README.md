@@ -6,12 +6,12 @@ https://github.com/Pocku/godot-sparrowatlas-editor/pull/1
 Original features and how to use it can be seen in the readme of godot-sparrowatlas-editor.
 https://github.com/Pocku/godot-sparrowatlas-editor
 
-#New Features
+# New Features
 - A toggle for the node animation property root path thing for some reason
 - Animation Indices
 - Be able to export all of the animations included in the xml. (No offset and indices settings.)
 - An AnimationPlayer xml packer
-#Fixes
+# Fixes
 - Frame region sometimes not positioned correctly
 
 # How to use the AnimationPlayer xml packer
