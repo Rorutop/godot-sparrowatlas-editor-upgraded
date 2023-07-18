@@ -85,8 +85,8 @@ func Notification(what,data):
 				if animation.size()>0:
 					frame=animation[objects["animIndex"].value];
 					
-				var widthcalc = 0; if len(frame.frameWidth) > 0: widthcalc = (int(frame.frameWidth) - int(frame.width))/2
-				var heightcalc = 0; if len(frame.frameHeight) > 0: heightcalc = (int(frame.frameHeight) - int(frame.height))/2
+				var widthcalc = 0; if len(frame.frameWidth) > 0: widthcalc = (int(frame.frameWidth) - int(frame.width))/2.1
+				var heightcalc = 0; if len(frame.frameHeight) > 0: heightcalc = (int(frame.frameHeight) - int(frame.height))/2.1
 				
 				var spriteCrop=Rect2(int(frame.x),int(frame.y),int(frame.width),int(frame.height));
 				var obj=objects["target"];
@@ -223,8 +223,8 @@ func OnButtonPressed(id):
 					if !indicesfound: continue
 					var frame=animation[index];
 					
-					var widthcalc = 0; if len(frame.frameWidth) > 0: widthcalc = (int(frame.frameWidth) - int(frame.width))/2
-					var heightcalc = 0; if len(frame.frameHeight) > 0: heightcalc = (int(frame.frameHeight) - int(frame.height))/2
+					var widthcalc = 0; if len(frame.frameWidth) > 0: widthcalc = (int(frame.frameWidth) - int(frame.width))/2.1
+					var heightcalc = 0; if len(frame.frameHeight) > 0: heightcalc = (int(frame.frameHeight) - int(frame.height))/2.1
 				
 					var targetCrop=Rect2(int(frame.x),int(frame.y),int(frame.width),int(frame.height));
 					var targetOffset=-Vector2(str(frame.frameX).to_float(),str(frame.frameY).to_float())+Vector2(objects["offsetX"].value,objects["offsetY"].value);
@@ -261,8 +261,8 @@ func OnButtonPressed(id):
 						var width = int(frame.width); if len(frame.frameWidth) > 0: width = int(frame.frameWidth)
 						var height = int(frame.height); if len(frame.frameHeight) > 0: height = int(frame.frameHeight)
 						
-						var widthcalc = 0; if len(frame.frameWidth) > 0: widthcalc = (int(frame.frameWidth) - int(frame.width))/2
-						var heightcalc = 0; if len(frame.frameHeight) > 0: heightcalc = (int(frame.frameHeight) - int(frame.height))/2
+						var widthcalc = 0; if len(frame.frameWidth) > 0: widthcalc = (int(frame.frameWidth) - int(frame.width))/2.1
+						var heightcalc = 0; if len(frame.frameHeight) > 0: heightcalc = (int(frame.frameHeight) - int(frame.height))/2.1
 				
 						var targetCrop=Rect2(int(frame.x),int(frame.y),int(frame.width),int(frame.height));
 						var targetOffset=-Vector2(int(frame.frameX) + widthcalc,int(frame.frameY) + heightcalc)+Vector2(objects["offsetX"].value,objects["offsetY"].value);
@@ -337,8 +337,8 @@ func OnButtonPressed(id):
 								var width = int(frame.width); if len(frame.frameWidth) > 0: width = int(frame.frameWidth)
 								var height = int(frame.height); if len(frame.frameHeight) > 0: height = int(frame.frameHeight)
 								
-								var widthcalc = 0; if len(frame.frameWidth) > 0: widthcalc = (int(frame.frameWidth) - int(frame.width))/2
-								var heightcalc = 0; if len(frame.frameHeight) > 0: heightcalc = (int(frame.frameHeight) - int(frame.height))/2
+								var widthcalc = 0; if len(frame.frameWidth) > 0: widthcalc = (int(frame.frameWidth) - int(frame.width))/2.1
+								var heightcalc = 0; if len(frame.frameHeight) > 0: heightcalc = (int(frame.frameHeight) - int(frame.height))/2.1
 						
 								var targetCrop=Rect2(int(frame.x),int(frame.y),int(frame.width),int(frame.height));
 								var targetOffset=-Vector2(int(frame.frameX) + widthcalc,int(frame.frameY) + heightcalc)+Vector2(objects["offsetX"].value,objects["offsetY"].value);
